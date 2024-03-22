@@ -8,6 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  TAGS: ghcr.io/quentinsoon/mooya-app
 
 jobs:
   build-and-test:
@@ -36,7 +37,7 @@ jobs:
           context: .
           file: Dockerfile
           push: ${{github.event_name != 'pull_request'}}
-          tags: ${{env.IMAGE_NAME}}
+          tags: ${{env.TAGS}}
 
       - name: Deploy the new image
         uses: appleboy/ssh-action@master
