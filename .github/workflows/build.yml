@@ -28,7 +28,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GIT_TOKEN }}
+          password: ${{ secrets.USER_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v2
@@ -41,9 +41,9 @@ jobs:
       - name: Deploy the new image
         uses: appleboy/ssh-action@master
         with:
-          host: 91.108.112.160
-          username: root
-          password: Qt8isnfR!!2509
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          password: ${{ secrets.VPS_PASSWORD }}
           script: |
             cd ~/stacks
             docker stack deploy -c docker-compose.yml dockercompose
