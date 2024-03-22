@@ -14,7 +14,7 @@ export default function Home() {
 			<div className="grow flex items-center justify-center flex-col">
 				<div className="font-semibold">Mooya</div>
 				<div>Site en construction</div>
-				<div>Update: 1.0.2</div>
+				<div>Update: 1.0.3 (GoogleAnalytics)</div>
 			</div>
 		</main>
 	);
