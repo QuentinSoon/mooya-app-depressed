@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--c-berry-50: #faf4ff;
+	--c-berry-100: #f4e6ff;
+	--c-berry-200: #ead0ff;
+	--c-berry-300: #daacff;
+	--c-berry-400: #c377ff;
+	--c-berry-500: #ac43ff;
+	--c-berry-600: #991ffe;
+	--c-berry-700: #840fe1;
+	--c-berry-800: #7012b7;
+	--c-berry-900: #5a108f;
+	--c-berry-950: #3e006e;
+}
+
+.dark {
+	--c-berry-50: #faf4ff;
+	--c-berry-100: #f4e6ff;
+	--c-berry-200: #ead0ff;
+	--c-berry-300: #daacff;
+	--c-berry-400: #c377ff;
+	--c-berry-500: #ac43ff;
+	--c-berry-600: #991ffe;
+	--c-berry-700: #840fe1;
+	--c-berry-800: #7012b7;
+	--c-berry-900: #5a108f;
+	--c-berry-950: #3e006e;
+}

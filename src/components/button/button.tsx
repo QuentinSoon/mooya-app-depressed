@@ -1,6 +1,6 @@
 import { cn } from '@/libs/cn';
 import { ButtonHTMLAttributes, PropsWithChildren, forwardRef } from 'react';
-import { ButtonVariantProps } from '.';
+import { ButtonColorProps, ButtonSizeProps, ButtonVariantProps } from '.';
 import './button.scss';
 
 type ButtonProps = PropsWithChildren<{
@@ -9,6 +9,15 @@ type ButtonProps = PropsWithChildren<{
 	 * @default 'solid'
 	 */
 	variant?: ButtonVariantProps;
+	/**
+	 * The size of the button.
+	 */
+	size: ButtonSizeProps;
+	/**
+	 * The color of the button.
+	 * @default 'berry'
+	 */
+	color?: ButtonColorProps;
 }>;
 
 type UseButtonProps = Omit<
@@ -18,9 +27,17 @@ type UseButtonProps = Omit<
 	ButtonProps;
 
 const Button = forwardRef<HTMLButtonElement, UseButtonProps>(
-	({ variant = 'solid', children }, ref) => {
+	({ variant = 'solid', size = 'md', color = 'berry', children }, ref) => {
 		return (
-			<button ref={ref} className={cn('button', `button-variant-${variant}`)}>
+			<button
+				ref={ref}
+				className={cn(
+					'button',
+					`button-variant-${variant}`,
+					`button-size-${size}`,
+					`button-color-${color}`
+				)}
+			>
 				{children}
 			</button>
 		);

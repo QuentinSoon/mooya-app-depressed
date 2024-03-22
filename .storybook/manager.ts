@@ -1,6 +1,6 @@
 import { addons } from '@storybook/manager-api';
-import { themes } from '@storybook/theming';
+import mooyaTheme from './mooyaTheme';
 
 addons.setConfig({
-	theme: themes.light,
+	theme: mooyaTheme,
 });
