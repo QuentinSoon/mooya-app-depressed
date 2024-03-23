@@ -31,8 +31,18 @@
 	 * Button color
 	 */
 	&.button-color-berry {
-		--btn-solid: var(--c-berry-700);
-		--btn-solid-hover: var(--c-berry-800);
-		--btn-foreground: var(--c-berry-50);
+		--btn-solid: var(--color-berry-700);
+		--btn-solid-hover: var(--color-berry-800);
+		--btn-foreground: var(--color-berry-50);
+	}
+	&.button-color-basic {
+		--btn-solid: var(--color-basic-700);
+		--btn-solid-hover: #000000;
+		--btn-foreground: var(--color-berry-50);
+	}
+	&.button-color-paradiso {
+		--btn-solid: var(--color-berry-700);
+		--btn-solid-hover: var(--color-berry-800);
+		--btn-foreground: var(--color-berry-50);
 	}
 }

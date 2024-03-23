@@ -3,29 +3,39 @@
 @tailwind utilities;
 
 :root {
-	--c-berry-50: #faf4ff;
-	--c-berry-100: #f4e6ff;
-	--c-berry-200: #ead0ff;
-	--c-berry-300: #daacff;
-	--c-berry-400: #c377ff;
-	--c-berry-500: #ac43ff;
-	--c-berry-600: #991ffe;
-	--c-berry-700: #840fe1;
-	--c-berry-800: #7012b7;
-	--c-berry-900: #5a108f;
-	--c-berry-950: #3e006e;
-}
+	--color-berry-50: #faf5ff;
+	--color-berry-100: #f3e8ff;
+	--color-berry-200: #e9d5ff;
+	--color-berry-300: #d8b4fe;
+	--color-berry-400: #c084fc;
+	--color-berry-500: #a855f7;
+	--color-berry-600: #9333ea;
+	--color-berry-700: #7e22ce;
+	--color-berry-800: #6b21a8;
+	--color-berry-900: #581c87;
+	--color-berry-950: #3b0764;
 
-.dark {
-	--c-berry-50: #faf4ff;
-	--c-berry-100: #f4e6ff;
-	--c-berry-200: #ead0ff;
-	--c-berry-300: #daacff;
-	--c-berry-400: #c377ff;
-	--c-berry-500: #ac43ff;
-	--c-berry-600: #991ffe;
-	--c-berry-700: #840fe1;
-	--c-berry-800: #7012b7;
-	--c-berry-900: #5a108f;
-	--c-berry-950: #3e006e;
+	--color-basic-50: #fafafa;
+	--color-basic-100: #f5f5f5;
+	--color-basic-200: #e5e5e5;
+	--color-basic-300: #d4d4d4;
+	--color-basic-400: #a3a3a3;
+	--color-basic-500: #737373;
+	--color-basic-600: #525252;
+	--color-basic-700: #404040;
+	--color-basic-800: #262626;
+	--color-basic-900: #171717;
+	--color-basic-950: #0a0a0a;
+
+	--color-paradiso-50: #f4f9f9;
+	--color-paradiso-100: #d9eeee;
+	--color-paradiso-200: #b2dddc;
+	--color-paradiso-300: #84c3c4;
+	--color-paradiso-400: #5ba2a6;
+	--color-paradiso-500: #3f8287;
+	--color-paradiso-600: #32696f;
+	--color-paradiso-700: #2b565a;
+	--color-paradiso-800: #264549;
+	--color-paradiso-900: #233b3e;
+	--color-paradiso-950: #102023;
 }
