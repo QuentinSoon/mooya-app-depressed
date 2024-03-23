@@ -74,5 +74,8 @@ export const Colors = (props: ButtonProps) => (
 		<Button {...props} color="paradiso">
 			Button
 		</Button>
+		<Button {...props} color="foreground">
+			Button
+		</Button>
 	</div>
 );

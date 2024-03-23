@@ -21,7 +21,7 @@
 		@apply px-3 h-8 min-w-16 text-sm font-normal rounded-xl gap-1;
 	}
 	&.button-size-md {
-		@apply px-4 h-10 min-w-20 text-sm font-normal rounded-xl gap-1;
+		@apply px-4 h-10 min-w-20 text-sm font-medium rounded-xl gap-1;
 	}
 	&.button-size-lg {
 		@apply px-6 h-12 min-w-24 text-base font-normal rounded-[14px] gap-1;
@@ -41,8 +41,13 @@
 		--btn-foreground: var(--color-berry-50);
 	}
 	&.button-color-paradiso {
-		--btn-solid: var(--color-berry-700);
-		--btn-solid-hover: var(--color-berry-800);
-		--btn-foreground: var(--color-berry-50);
+		--btn-solid: var(--color-paradiso-500);
+		--btn-solid-hover: var(--color-paradiso-600);
+		--btn-foreground: var(--color-paradiso-50);
+	}
+	&.button-color-foreground {
+		--btn-solid: var(--color-basic-200);
+		--btn-solid-hover: var(--color-basic-300);
+		--btn-foreground: #000000;
 	}
 }

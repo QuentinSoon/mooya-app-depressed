@@ -17,7 +17,7 @@ type ButtonProps = PropsWithChildren<{
 	/**
 	 * The size of the button.
 	 */
-	size: ButtonSizeProps;
+	size?: ButtonSizeProps;
 	/**
 	 * The rounded of the button.
 	 */
@@ -37,7 +37,14 @@ type UseButtonProps = Omit<
 
 const Button = forwardRef<HTMLButtonElement, UseButtonProps>(
 	(
-		{ variant = 'solid', size = 'md', rounded, color = 'basic', children },
+		{
+			variant = 'solid',
+			size = 'md',
+			rounded,
+			color = 'basic',
+			children,
+			...otherProps
+		},
 		ref
 	) => {
 		return (
@@ -50,6 +57,7 @@ const Button = forwardRef<HTMLButtonElement, UseButtonProps>(
 					rounded && `button-rounded-${rounded}`,
 					`button-color-${color}`
 				)}
+				{...otherProps}
 			>
 				{children}
 			</button>
