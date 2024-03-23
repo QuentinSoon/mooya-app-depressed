@@ -1,6 +1,20 @@
 .button {
 	@apply relative inline-flex items-center justify-center whitespace-nowrap box-border select-none subpixel-antialiased duration-200;
 
+	&.button-loading {
+		& > .button-content {
+			@apply opacity-0;
+		}
+	}
+
+	&.button-fullWidth {
+		@apply w-full;
+	}
+
+	&.button-contentFullWidth {
+		@apply justify-between;
+	}
+
 	/**
 	 * Button variant
 	 */
@@ -11,7 +25,10 @@
 		}
 	}
 	&.button-variant-outline {
-		@apply bg-[--btn-solid] text-white rounded-xl px-4 py-2.5;
+		@apply bg-[--btn-solid] text-[--btn-foreground];
+		&:not(:disabled):hover {
+			@apply bg-[--btn-solid-hover];
+		}
 	}
 
 	/**
@@ -19,12 +36,40 @@
 	 */
 	&.button-size-sm {
 		@apply px-3 h-8 min-w-16 text-sm font-normal rounded-xl gap-1;
+		svg {
+			@apply h-4 w-4; // Appliquer les styles au SVG à l'intérieur de .button-svg
+		}
 	}
 	&.button-size-md {
 		@apply px-4 h-10 min-w-20 text-sm font-medium rounded-xl gap-1;
+		svg {
+			@apply h-5 w-5; // Appliquer les styles au SVG à l'intérieur de .button-svg
+		}
 	}
 	&.button-size-lg {
-		@apply px-6 h-12 min-w-24 text-base font-normal rounded-[14px] gap-1;
+		@apply px-6 h-12 min-w-24 text-base font-normal rounded-2xl gap-1;
+		svg {
+			@apply h-6 w-6; // Appliquer les styles au SVG à l'intérieur de .button-svg
+		}
+	}
+
+	/**
+	 * Button rounded
+	 */
+	&.button-rounded-none {
+		@apply rounded-none;
+	}
+	&.button-rounded-sm {
+		@apply rounded-lg;
+	}
+	&.button-rounded-md {
+		@apply rounded-xl;
+	}
+	&.button-rounded-lg {
+		@apply rounded-2xl;
+	}
+	&.button-rounded-full {
+		@apply rounded-full;
 	}
 
 	/**
@@ -33,21 +78,25 @@
 	&.button-color-berry {
 		--btn-solid: var(--color-berry-700);
 		--btn-solid-hover: var(--color-berry-800);
+		--btn-text: var(--color-berry-700);
 		--btn-foreground: var(--color-berry-50);
 	}
 	&.button-color-basic {
-		--btn-solid: var(--color-basic-700);
+		--btn-solid: var(--color-basic-800);
 		--btn-solid-hover: #000000;
+		--btn-text: var(--color-basic-800);
 		--btn-foreground: var(--color-berry-50);
 	}
 	&.button-color-paradiso {
 		--btn-solid: var(--color-paradiso-500);
 		--btn-solid-hover: var(--color-paradiso-600);
+		--btn-text: var(--color-paradiso-500);
 		--btn-foreground: var(--color-paradiso-50);
 	}
 	&.button-color-foreground {
 		--btn-solid: var(--color-basic-200);
 		--btn-solid-hover: var(--color-basic-300);
+		--btn-text: var(--color-basic-200);
 		--btn-foreground: #000000;
 	}
 }

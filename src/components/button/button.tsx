@@ -1,4 +1,5 @@
 import { cn } from '@/libs/cn';
+import Lottie from 'lottie-react';
 import { ButtonHTMLAttributes, PropsWithChildren, forwardRef } from 'react';
 import {
 	ButtonColorProps,
@@ -6,6 +7,7 @@ import {
 	ButtonSizeProps,
 	ButtonVariantProps,
 } from '.';
+import Spinner from '../../../public/assets/Spinner.json';
 import './button.scss';
 
 type ButtonProps = PropsWithChildren<{
@@ -16,6 +18,7 @@ type ButtonProps = PropsWithChildren<{
 	variant?: ButtonVariantProps;
 	/**
 	 * The size of the button.
+	 * @default 'md'
 	 */
 	size?: ButtonSizeProps;
 	/**
@@ -27,6 +30,31 @@ type ButtonProps = PropsWithChildren<{
 	 * @default 'berry'
 	 */
 	color?: ButtonColorProps;
+	/**
+	 * The button is loading.
+	 * @default false
+	 */
+	loading?: boolean;
+	/**
+	 * The button is full width.
+	 * @default false
+	 */
+	fullWidth?: boolean;
+	/**
+	 * The startContent of the button.
+	 * @default null
+	 */
+	startContent?: React.ReactNode;
+	/**
+	 * The endContent of the button.
+	 * @default null
+	 */
+	endContent?: React.ReactNode;
+	/**
+	 * The content is full width.
+	 * @default false
+	 */
+	contentFullWidth?: boolean;
 }>;
 
 type UseButtonProps = Omit<
@@ -42,7 +70,13 @@ const Button = forwardRef<HTMLButtonElement, UseButtonProps>(
 			size = 'md',
 			rounded,
 			color = 'basic',
+			loading = false,
+			fullWidth = false,
+			startContent,
+			endContent,
+			contentFullWidth = false,
 			children,
+			className,
 			...otherProps
 		},
 		ref
@@ -54,12 +88,24 @@ const Button = forwardRef<HTMLButtonElement, UseButtonProps>(
 					'button',
 					`button-variant-${variant}`,
 					`button-size-${size}`,
+					`button-color-${color}`,
+
 					rounded && `button-rounded-${rounded}`,
-					`button-color-${color}`
+
+					{ 'button-loading': loading },
+					{ 'button-fullWidth': fullWidth },
+					{ 'button-contentFullWidth': contentFullWidth },
+
+					className
 				)}
 				{...otherProps}
 			>
-				{children}
+				{loading && (
+					<Lottie animationData={Spinner} className="absolute h-full" />
+				)}
+				{startContent ? startContent : null}
+				{children && <span className={cn('button-content')}>{children}</span>}
+				{endContent ? endContent : null}
 			</button>
 		);
 	}

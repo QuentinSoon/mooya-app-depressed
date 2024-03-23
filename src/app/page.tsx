@@ -15,16 +15,26 @@ export default function Home() {
 				</div>
 				<div className="font-semibold">Mooya</div>
 			</div>
-			<div className="grow flex items-center justify-center flex-col">
+			<div className="grow flex items-center justify-center flex-col space-y-0.5">
 				<div className="font-semibold">Mooya</div>
 				<div>Site en construction</div>
-				<div>Update: 1.0.4 (Prepare to Tailwind v4 and Storybook v8)</div>
-				<Button
-					color="foreground"
-					onClick={() => router.push('https://www.instagram.com/mooyafrance/')}
-				>
-					Instagram
-				</Button>
+				<div>Update: 1.0.5 (Component Builder)</div>
+				<div className="flex flex-row gap-3 pt-0.5">
+					<Button
+						color="foreground"
+						onClick={() =>
+							router.push('https://www.instagram.com/mooyafrance/')
+						}
+					>
+						Instagram
+					</Button>
+					<Button
+						color="foreground"
+						onClick={() => router.push('https://twitter.com/MooyaFrance/')}
+					>
+						X / Twitter
+					</Button>
+				</div>
 			</div>
 		</main>
 	);
