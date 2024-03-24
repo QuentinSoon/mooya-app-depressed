@@ -1,6 +1,7 @@
 'use client';
 
 import { cn } from '@/libs/cn';
+import { AnimatePresence, motion } from 'framer-motion';
 import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
 import { BackdropProps } from '../overlay';
 import { Overlay } from '../overlay/overlay';
@@ -31,7 +32,7 @@ const Modal = forwardRef<HTMLButtonElement, UseModalProps>(
 		ref
 	) => {
 		return (
-			<div>
+			<AnimatePresence>
 				{open && (
 					<Overlay
 						open={open}
@@ -39,17 +40,45 @@ const Modal = forwardRef<HTMLButtonElement, UseModalProps>(
 						backdrop={backdrop}
 						placement={placement}
 					>
-						<div
+						{/* <div
 							className={cn(
 								'absolute z-10 top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2',
 								className
 							)}
 						>
 							{children}
-						</div>
+						</div> */}
+						<motion.div
+							variants={{
+								active: {
+									opacity: 1,
+									transition: {
+										duration: 0.2,
+										ease: 'easeOut',
+									},
+									zoom: 1,
+								},
+								inactive: {
+									opacity: 0,
+									transition: {
+										duration: 0.15,
+									},
+									zoom: 0.4,
+								},
+							}}
+							initial="inactive"
+							animate="active"
+							exit="inactive"
+							className={cn(
+								'absolute z-10 top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2',
+								className
+							)}
+						>
+							{children}
+						</motion.div>
 					</Overlay>
 				)}
-			</div>
+			</AnimatePresence>
 		);
 	}
 );

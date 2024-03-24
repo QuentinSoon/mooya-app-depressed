@@ -24,7 +24,11 @@ export const Default = (props: ModalProps) => {
 	return (
 		<div>
 			<Button onClick={() => setOpen(true)}>Test Button</Button>
-			<Modal open={open} setOpen={setOpen} className="bg-white rounded-lg p-4">
+			<Modal
+				open={open}
+				setOpen={setOpen}
+				className="bg-white rounded-lg p-4 w-80"
+			>
 				Test
 			</Modal>
 		</div>
