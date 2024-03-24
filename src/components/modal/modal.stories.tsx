@@ -27,7 +27,7 @@ export const Default = (props: ModalProps) => {
 			<Modal
 				open={open}
 				setOpen={setOpen}
-				className="bg-white rounded-lg p-4 w-80"
+				className="bg-white rounded-2xl p-4 w-80 h-96"
 			>
 				Test
 			</Modal>
