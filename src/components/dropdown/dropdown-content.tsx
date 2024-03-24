@@ -13,7 +13,11 @@ export type UseDropdownContentProps = Omit<
 
 const DropdownContent = forwardRef<HTMLDivElement, UseDropdownContentProps>(
 	({ children, className }, ref) => {
-		return <PopoverContent className="w-32">{children}</PopoverContent>;
+		return (
+			<PopoverContent className={className ?? 'popover-defaultContent'}>
+				{children}
+			</PopoverContent>
+		);
 	}
 );
 DropdownContent.displayName = 'DropdownContent';

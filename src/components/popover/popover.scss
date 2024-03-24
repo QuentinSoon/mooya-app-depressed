@@ -2,6 +2,10 @@
 	@apply relative h-fit w-fit;
 }
 
+.popover-defaultContent {
+	@apply w-56 overflow-hidden bg-white rounded-2xl shadow-lg ring-1 ring-neutral-200 px-4 py-3;
+}
+
 /** Overlay Placement **/
 .overlay-center {
 	@apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;

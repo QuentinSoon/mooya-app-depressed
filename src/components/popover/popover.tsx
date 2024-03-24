@@ -20,6 +20,7 @@ export type PopoverProps = PropsWithChildren<{
 	setOpen?: (newValue: boolean) => void;
 	backdrop?: BackdropProps;
 	placement?: PopoverPlacementsProps;
+	onHover?: boolean;
 }>;
 
 export type UsePopoverProps = Omit<

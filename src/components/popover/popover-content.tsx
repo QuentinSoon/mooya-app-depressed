@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/libs/cn';
 import { motion } from 'framer-motion';
 import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
 import { usePopoverContext } from './popover-context';
@@ -40,7 +41,11 @@ const PopoverContent = forwardRef<HTMLDivElement, UsePopoverContentProps>(
 				initial="inactive"
 				animate="active"
 				exit="inactive"
-				className={`z-50 absolute overlay-${context.placement ?? 'bottom'}`}
+				className={cn(
+					`z-50 absolute overlay-${context.placement ?? 'button'}`,
+
+					className ?? 'popover-defaultContent'
+				)}
 			>
 				{children}
 			</motion.div>
