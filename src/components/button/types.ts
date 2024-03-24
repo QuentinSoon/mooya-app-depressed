@@ -1,4 +1,10 @@
-type ButtonVariantProps = 'solid' | 'outline';
+type ButtonVariantProps =
+	| 'solid'
+	| 'outline'
+	| 'ghost'
+	| 'light'
+	| 'flat'
+	| 'faded';
 type ButtonSizeProps = 'sm' | 'md' | 'lg';
 type ButtonRoundedProps = 'sm' | 'md' | 'lg' | 'full' | 'none';
 type ButtonColorProps = 'basic' | 'berry' | 'paradiso' | 'foreground';

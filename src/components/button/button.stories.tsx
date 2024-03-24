@@ -32,6 +32,18 @@ export const Variants = (props: ButtonProps) => (
 		<Button {...props} variant="outline">
 			Outline
 		</Button>
+		<Button {...props} variant="light">
+			Light
+		</Button>
+		<Button {...props} variant="ghost">
+			Ghost
+		</Button>
+		<Button {...props} variant="flat">
+			Flat
+		</Button>
+		<Button {...props} variant="faded">
+			Faded
+		</Button>
 	</div>
 );
 

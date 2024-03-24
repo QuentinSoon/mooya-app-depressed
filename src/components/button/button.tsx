@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/libs/cn';
 import Lottie from 'lottie-react';
 import { ButtonHTMLAttributes, PropsWithChildren, forwardRef } from 'react';
@@ -27,7 +29,7 @@ type ButtonProps = PropsWithChildren<{
 	rounded?: ButtonRoundedProps;
 	/**
 	 * The color of the button.
-	 * @default 'berry'
+	 * @default 'basic'
 	 */
 	color?: ButtonColorProps;
 	/**

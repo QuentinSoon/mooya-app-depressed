@@ -18,7 +18,7 @@ export default function Home() {
 			<div className="grow flex items-center justify-center flex-col space-y-0.5">
 				<div className="font-semibold">Mooya</div>
 				<div>Site en construction</div>
-				<div>Update: 1.0.5 (Component Builder)</div>
+				<div>Update: 1.0.6 (Component Checkbox)</div>
 				<div className="flex flex-row gap-3 pt-0.5">
 					<Button
 						color="foreground"
