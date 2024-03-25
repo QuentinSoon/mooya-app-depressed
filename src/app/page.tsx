@@ -1,18 +1,13 @@
 'use client';
-import Image from 'next/image';
 
 import { Button } from '@/components/button';
-import { Popover } from '@/components/popover/popover';
-import { PopoverContent } from '@/components/popover/popover-content';
-import { PopoverTrigger } from '@/components/popover/popover-trigger';
 import { useRouter } from 'next/navigation';
-import LOGO from '../../public/arrière-plan.png';
 
 export default function Home() {
 	const router = useRouter();
 	return (
 		<main className="h-screen w-screen flex flex-col">
-			<div className="h-16 border flex flex-row items-center justify-between px-8 z-10">
+			{/* <div className="h-16 border flex flex-row items-center justify-between px-8 z-10">
 				<div className="flex flex-row items-center gap-4">
 					<div>
 						<Image src={LOGO} height={32} alt="logo" />
@@ -31,11 +26,11 @@ export default function Home() {
 						</PopoverContent>
 					</Popover>
 				</div>
-			</div>
+			</div> */}
 			<div className="grow flex items-center justify-center flex-col space-y-0.5">
-				<div className="font-semibold">Mooya</div>
-				<div>Site en construction</div>
-				<div>Update: 1.0.6 (Component Checkbox)</div>
+				<div className="font-semibold">
+					Des ajustements sont en cours sur la plateforme.
+				</div>
 				<div className="flex flex-row gap-3 pt-0.5">
 					<Button
 						color="foreground"
