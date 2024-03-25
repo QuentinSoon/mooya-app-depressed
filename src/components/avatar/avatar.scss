@@ -1,5 +1,5 @@
 .avatar {
-	@apply relative inline-flex items-center justify-center overflow-hidden box-border border-none outline-none subpixel-antialiased;
+	@apply relative inline-flex items-center justify-center overflow-hidden box-border border-none outline-none subpixel-antialiased bg-[--color-primary];
 }
 .avatar-image {
 	@apply relative object-cover h-full w-full;

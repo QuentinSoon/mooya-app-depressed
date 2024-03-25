@@ -54,7 +54,7 @@ const Avatar = forwardRef<HTMLDivElement, UseAvatarProps>(
 					exit={{ opacity: 0 }}
 				/>
 			);
-		}, [image]);
+		}, [src, image]);
 
 		return (
 			<div
