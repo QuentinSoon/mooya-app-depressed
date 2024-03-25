@@ -6,7 +6,7 @@ import { PopoverContent } from '@/components/popover/popover-content';
 import { PopoverTrigger } from '@/components/popover/popover-trigger';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import LOGO from 'public/logo.png';
+import LOGO from '../../public/logo.png';
 
 export default function Home() {
 	const router = useRouter();
