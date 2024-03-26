@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/libs/cn';
 import { LiHTMLAttributes, PropsWithChildren, forwardRef } from 'react';
 import { useMenuContext } from './menu-context';
 import './menu.scss';
@@ -15,7 +16,7 @@ export type UseMenuSeparatorProps = Omit<
 const MenuSeparator = forwardRef<HTMLLIElement, UseMenuSeparatorProps>(
 	({ children, className }, ref) => {
 		const context = useMenuContext();
-		return <li className="menu-separator" />;
+		return <li className={cn('menu-separator', className)} />;
 	}
 );
 MenuSeparator.displayName = 'MenuSeparator';

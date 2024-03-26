@@ -1,9 +1,11 @@
 'use client';
 
+import { cn } from '@/libs/cn';
 import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
 import { MenuColorProps, MenuSizeProps, MenuVariantProps } from '../menu';
 import { Menu } from '../menu/menu';
 import { PopoverContent } from '../popover/popover-content';
+import './dropdown.scss';
 
 export type DropdownContentProps = PropsWithChildren<{
 	/**
@@ -35,7 +37,7 @@ const DropdownContent = forwardRef<HTMLDivElement, UseDropdownContentProps>(
 		ref
 	) => {
 		return (
-			<PopoverContent className={className ?? 'popover-defaultContent'}>
+			<PopoverContent className={cn(className ?? 'dropdown-defaultContent')}>
 				<Menu variant={variant} size={size} color={color}>
 					{children}
 				</Menu>

@@ -1,10 +1,14 @@
 'use client';
 
 import { Button } from '@/components/button';
-import { Dropdown } from '@/components/dropdown/dropdown';
-import { DropdownContent } from '@/components/dropdown/dropdown-content';
-import { DropdownItem } from '@/components/dropdown/dropdown-item';
-import { DropdownTrigger } from '@/components/dropdown/dropdown-trigger';
+
+import {
+	Dropdown,
+	DropdownContent,
+	DropdownItem,
+	DropdownSeparator,
+	DropdownTrigger,
+} from '@/components/dropdown';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import LOGO from '../../public/logo.png';
@@ -26,10 +30,12 @@ export default function Home() {
 							<Button>Mon Compte</Button>
 						</DropdownTrigger>
 						<DropdownContent size="md">
-							<DropdownItem>Inscription</DropdownItem>
-							<DropdownItem>Connexion</DropdownItem>
+							<DropdownItem className="font-medium">Inscription</DropdownItem>
+							<DropdownItem className="font-medium">Connexion</DropdownItem>
+							<DropdownSeparator />
 							<DropdownItem>Français (FR)</DropdownItem>
 							<DropdownItem>€ EUR</DropdownItem>
+							<DropdownSeparator />
 							<DropdownItem>Parrainer un hôte</DropdownItem>
 							<DropdownItem>Déconnexion</DropdownItem>
 						</DropdownContent>

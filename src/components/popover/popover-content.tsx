@@ -43,7 +43,7 @@ const PopoverContent = forwardRef<HTMLDivElement, UsePopoverContentProps>(
 				exit="inactive"
 				className={cn(
 					`z-50 absolute overlay-${context.placement ?? 'button'}`,
-
+					'popover-defaultContent',
 					className ?? 'popover-defaultContent'
 				)}
 			>

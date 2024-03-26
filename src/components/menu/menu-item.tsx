@@ -15,15 +15,15 @@ export type UseMenuItemProps = Omit<
 
 const MenuItem = forwardRef<HTMLLIElement, UseMenuItemProps>(
 	({ children, className }, ref) => {
-		const context = useMenuContext();
+		const { variant, size, color } = useMenuContext();
 		return (
 			<li
 				ref={ref}
 				className={cn(
 					'menu-item',
-					`menu-item-variant-${context.variant}`,
-					`menu-item-size-${context.size}`,
-					`menu-item-color-${context.color}`,
+					`menu-item-variant-${variant}`,
+					`menu-item-size-${size}`,
+					`menu-item-color-${color}`,
 					'bg-red-500'
 				)}
 			>

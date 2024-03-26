@@ -21,8 +21,8 @@ export default {
 
 export const Default = (props: MenuProps) => (
 	<Menu {...props}>
-		<MenuItem className="font-bold antialiased">Connexion</MenuItem>
-		<MenuItem className="antialiased bg-red-500">Inscription</MenuItem>
+		<MenuItem className="font-bold">Connexion</MenuItem>
+		<MenuItem className="bg-red-500">Inscription</MenuItem>
 		<MenuSeparator />
 		<MenuItem>Mon compte</MenuItem>
 	</Menu>
