@@ -33,13 +33,9 @@ export default function Home() {
 							<DropdownItem className="font-medium">Inscription</DropdownItem>
 							<DropdownItem className="font-medium">Connexion</DropdownItem>
 							<DropdownSeparator />
-							<DropdownItem>Français (FR)</DropdownItem>
-							<DropdownItem>€ EUR</DropdownItem>
-							<DropdownSeparator />
-							<DropdownItem>Parrainer un hôte</DropdownItem>
-							<DropdownItem color="poppy" variant="light">
-								Déconnexion
-							</DropdownItem>
+							<DropdownItem>Louer mon logement</DropdownItem>
+							<DropdownItem>Trouver un logement</DropdownItem>
+							<DropdownItem>Aide</DropdownItem>
 						</DropdownContent>
 					</Dropdown>
 				</div>
