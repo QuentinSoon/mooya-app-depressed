@@ -31,7 +31,7 @@ export type UseMenuProps = Omit<
 	MenuProps;
 
 const Menu = forwardRef<HTMLUListElement, UseMenuProps>(
-	({ variant = 'solid', size = 'md', color = 'basic', children }, ref) => {
+	({ variant = 'flat', size = 'md', color = 'basic', children }, ref) => {
 		return (
 			<MenuContext.Provider value={{ variant, size, color }}>
 				<ul ref={ref} className={cn('menu')}>

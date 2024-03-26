@@ -1,9 +1,13 @@
 .menu {
 	@apply flex flex-col gap-0.5;
+
+	& > .menu-separator {
+		@apply w-full h-px m-1 bg-neutral-200;
+	}
 }
 
 .menu-item {
-	@apply flex items-center justify-between w-full hover:bg-[--mn-solid] cursor-pointer box-border duration-150 subpixel-antialiased;
+	@apply flex items-center justify-between w-full hover:bg-[--mn-solid] cursor-pointer box-border duration-150;
 
 	/**
 	 * Menu Item variant
@@ -46,7 +50,7 @@
 		@apply px-2 py-1.5 text-sm font-normal rounded-lg;
 	}
 	&.menu-item-size-md {
-		@apply px-4 py-3 text-sm font-normal rounded-xl;
+		@apply px-3 py-2.5 text-sm font-normal rounded-xl;
 	}
 	&.menu-item-size-lg {
 	}

@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react';
-import { Menu, MenuItem, MenuProps } from '.';
+import { Menu, MenuItem, MenuProps, MenuSeparator } from '.';
 
 export default {
 	title: 'Library/Menu',
@@ -11,7 +11,9 @@ export default {
 	decorators: [
 		(Story) => (
 			<div className="flex items-center justify-center w-full h-full">
-				<Story />
+				<div className="w-52 p-2 overflow-hidden bg-white rounded-2xl shadow-lg ring-1 ring-neutral-200">
+					<Story />
+				</div>
 			</div>
 		),
 	],
@@ -19,8 +21,9 @@ export default {
 
 export const Default = (props: MenuProps) => (
 	<Menu {...props}>
-		<MenuItem>Coucou</MenuItem>
-		<MenuItem>Coucou</MenuItem>
-		<MenuItem>Coucou</MenuItem>
+		<MenuItem className="font-bold antialiased">Connexion</MenuItem>
+		<MenuItem className="antialiased bg-red-500">Inscription</MenuItem>
+		<MenuSeparator />
+		<MenuItem>Mon compte</MenuItem>
 	</Menu>
 );
