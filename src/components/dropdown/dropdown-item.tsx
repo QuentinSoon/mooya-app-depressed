@@ -1,9 +1,9 @@
 'use client';
 
-import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
-import { MenuItem } from '../menu/menu-item';
+import { HTMLAttributes, forwardRef } from 'react';
+import { MenuItem, MenuItemProps } from '../menu';
 
-export type DropdownItemProps = PropsWithChildren<{}>;
+export type DropdownItemProps = MenuItemProps;
 
 export type UseDropdownItemProps = Omit<
 	HTMLAttributes<HTMLDivElement>,
@@ -12,8 +12,12 @@ export type UseDropdownItemProps = Omit<
 	DropdownItemProps;
 
 const DropdownItem = forwardRef<HTMLDivElement, UseDropdownItemProps>(
-	({ children, className }, ref) => {
-		return <MenuItem>{children}</MenuItem>;
+	({ children, variant, color, className }, ref) => {
+		return (
+			<MenuItem variant={variant} color={color} className={className}>
+				{children}
+			</MenuItem>
+		);
 	}
 );
 DropdownItem.displayName = 'DropdownItem';

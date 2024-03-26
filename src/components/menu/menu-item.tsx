@@ -1,11 +1,15 @@
 'use client';
 
 import { cn } from '@/libs/cn';
-import { LiHTMLAttributes, PropsWithChildren, forwardRef } from 'react';
+import { LiHTMLAttributes, forwardRef } from 'react';
+import { MenuColorProps, MenuVariantProps } from '.';
 import { useMenuContext } from './menu-context';
 import './menu.scss';
 
-export type MenuItemProps = PropsWithChildren<{}>;
+export type MenuItemProps = {
+	variant?: MenuVariantProps;
+	color?: MenuColorProps;
+};
 
 export type UseMenuItemProps = Omit<
 	LiHTMLAttributes<HTMLLIElement>,
@@ -14,17 +18,17 @@ export type UseMenuItemProps = Omit<
 	MenuItemProps;
 
 const MenuItem = forwardRef<HTMLLIElement, UseMenuItemProps>(
-	({ children, className }, ref) => {
-		const { variant, size, color } = useMenuContext();
+	({ variant, color, children, className }, ref) => {
+		const context = useMenuContext();
 		return (
 			<li
 				ref={ref}
 				className={cn(
 					'menu-item',
-					`menu-item-variant-${variant}`,
-					`menu-item-size-${size}`,
-					`menu-item-color-${color}`,
-					'bg-red-500'
+					`menu-item-variant-${variant ?? context.variant}`,
+					`menu-item-size-${context.size}`,
+					`menu-item-color-${color ?? context.color}`,
+					className
 				)}
 			>
 				{children}

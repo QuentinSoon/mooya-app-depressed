@@ -82,4 +82,12 @@
 		--mn-solid: var(--color-basic-200);
 		--mn-border: var(--color-basic-200);
 	}
+	&.menu-item-color-poppy {
+		--mn-solid: var(--color-poppy-500);
+		--mn-solid-flat: var(--color-poppy-100);
+		--mn-solid-light: var(--color-poppy-200);
+		--mn-border: var(--color-poppy-500);
+		--mn-text: var(--color-poppy-500);
+		--mn-foreground: var(--color-poppy-50);
+	}
 }

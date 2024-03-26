@@ -37,7 +37,9 @@ export default function Home() {
 							<DropdownItem>€ EUR</DropdownItem>
 							<DropdownSeparator />
 							<DropdownItem>Parrainer un hôte</DropdownItem>
-							<DropdownItem>Déconnexion</DropdownItem>
+							<DropdownItem color="poppy" variant="light">
+								Déconnexion
+							</DropdownItem>
 						</DropdownContent>
 					</Dropdown>
 				</div>
