@@ -1,9 +1,10 @@
 'use client';
 
 import { Button } from '@/components/button';
-import { Popover } from '@/components/popover/popover';
-import { PopoverContent } from '@/components/popover/popover-content';
-import { PopoverTrigger } from '@/components/popover/popover-trigger';
+import { Dropdown } from '@/components/dropdown/dropdown';
+import { DropdownContent } from '@/components/dropdown/dropdown-content';
+import { DropdownItem } from '@/components/dropdown/dropdown-item';
+import { DropdownTrigger } from '@/components/dropdown/dropdown-trigger';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import LOGO from '../../public/logo.png';
@@ -20,16 +21,19 @@ export default function Home() {
 					<div className="font-semibold">Mooya</div>
 				</div>
 				<div>
-					<Popover placement="bottom-right">
-						<PopoverTrigger>
+					<Dropdown placement="bottom-right">
+						<DropdownTrigger>
 							<Button>Mon Compte</Button>
-						</PopoverTrigger>
-						<PopoverContent>
-							<ul>
-								<li>Mise a jour</li>
-							</ul>
-						</PopoverContent>
-					</Popover>
+						</DropdownTrigger>
+						<DropdownContent size="md">
+							<DropdownItem>Inscription</DropdownItem>
+							<DropdownItem>Connexion</DropdownItem>
+							<DropdownItem>Français (FR)</DropdownItem>
+							<DropdownItem>€ EUR</DropdownItem>
+							<DropdownItem>Parrainer un hôte</DropdownItem>
+							<DropdownItem>Déconnexion</DropdownItem>
+						</DropdownContent>
+					</Dropdown>
 				</div>
 			</div>
 			<div className="grow flex items-center justify-center flex-col space-y-0.5">

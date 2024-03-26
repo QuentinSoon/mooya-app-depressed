@@ -1,10 +1,27 @@
 'use client';
 
 import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
+import { MenuColorProps, MenuSizeProps, MenuVariantProps } from '../menu';
 import { Menu } from '../menu/menu';
 import { PopoverContent } from '../popover/popover-content';
 
-export type DropdownContentProps = PropsWithChildren<{}>;
+export type DropdownContentProps = PropsWithChildren<{
+	/**
+	 * The variant of the menu.
+	 * @default solid
+	 */
+	variant?: MenuVariantProps;
+	/**
+	 * The size of the menu.
+	 * @default sm
+	 */
+	size?: MenuSizeProps;
+	/**
+	 * The color of the menu.
+	 * @default basic
+	 */
+	color?: MenuColorProps;
+}>;
 
 export type UseDropdownContentProps = Omit<
 	HTMLAttributes<HTMLDivElement>,
@@ -13,10 +30,15 @@ export type UseDropdownContentProps = Omit<
 	DropdownContentProps;
 
 const DropdownContent = forwardRef<HTMLDivElement, UseDropdownContentProps>(
-	({ children, className }, ref) => {
+	(
+		{ variant = 'flat', size = 'sm', color = 'basic', children, className },
+		ref
+	) => {
 		return (
 			<PopoverContent className={className ?? 'popover-defaultContent'}>
-				<Menu>{children}</Menu>
+				<Menu variant={variant} size={size} color={color}>
+					{children}
+				</Menu>
 			</PopoverContent>
 		);
 	}

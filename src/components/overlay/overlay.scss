@@ -1,5 +1,5 @@
 .overlay {
-	@apply fixed inset-0;
+	@apply fixed inset-0 z-10;
 
 	&.overlay-transparent {
 		@apply bg-transparent;
