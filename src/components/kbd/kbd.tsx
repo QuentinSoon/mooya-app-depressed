@@ -1,8 +1,13 @@
+'use client';
+
 import { HTMLAttributes, PropsWithChildren, forwardRef, useMemo } from 'react';
 import { KbdKey, kbdKeysLabelMap, kbdKeysMap } from '.';
 import './kbd.scss';
 
 export type KbdProps = PropsWithChildren<{
+	/**
+	 * The key(s) to render in the Kbd component.
+	 */
 	keys?: KbdKey | KbdKey[];
 }>;
 

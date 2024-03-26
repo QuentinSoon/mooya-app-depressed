@@ -1,0 +1,50 @@
+.menu {
+	@apply flex flex-col;
+}
+
+.menu-item {
+	@apply flex items-center justify-between w-full rounded-lg hover:bg-[--mn-solid] cursor-pointer;
+
+	/**
+	 * Menu Item variant
+	 */
+	&.menu-item-variant-solid {
+	}
+	&.menu-item-variant-outline {
+	}
+	&.menu-item-variant-ghost {
+	}
+	&.menu-item-variant-light {
+	}
+	&.menu-item-variant-flat {
+	}
+	&.menu-item-variant-faded {
+	}
+
+	/**
+	 * Menu Item size
+	 */
+	&.menu-item-size-sm {
+	}
+	&.menu-item-size-md {
+		@apply px-3 py-2 text-base font-normal;
+	}
+	&.menu-item-size-lg {
+	}
+
+	/**
+	* Menu color
+	**/
+	&.menu-item-color-berry {
+		--mn-solid: var(--color-berry-200);
+	}
+	&.menu-item-color-basic {
+		--mn-solid: var(--color-basic-200);
+	}
+	&.menu-item-color-paradiso {
+		--mn-solid: var(--color-paradiso-200);
+	}
+	&.menu-item-color-foreground {
+		--mn-solid: var(--color-basic-200);
+	}
+}

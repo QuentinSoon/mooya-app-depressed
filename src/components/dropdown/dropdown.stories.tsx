@@ -2,6 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Button } from '../button';
 import { Dropdown, DropdownProps } from './dropdown';
 import { DropdownContent } from './dropdown-content';
+import { DropdownItem } from './dropdown-item';
 import { DropdownTrigger } from './dropdown-trigger';
 
 export default {
@@ -28,17 +29,9 @@ export const Default = (props: DropdownProps) => (
 			</Button>
 		</DropdownTrigger>
 		<DropdownContent>
-			<ul>
-				<li className="px-2 py-1.5 hover:bg-neutral-200 rounded-lg cursor-pointer">
-					Item 1
-				</li>
-				<li className="px-2 py-1.5 hover:bg-neutral-200 rounded-lg cursor-pointer">
-					Item 1
-				</li>
-				<li className="px-2 py-1.5 hover:bg-neutral-200 rounded-lg cursor-pointer">
-					Item 1
-				</li>
-			</ul>
+			<DropdownItem>Item 1</DropdownItem>
+			<DropdownItem>Item 2</DropdownItem>
+			<DropdownItem>Item 3</DropdownItem>
 		</DropdownContent>
 	</Dropdown>
 );

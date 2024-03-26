@@ -1,6 +1,7 @@
 'use client';
 
 import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
+import { Menu } from '../menu/menu';
 import { PopoverContent } from '../popover/popover-content';
 
 export type DropdownContentProps = PropsWithChildren<{}>;
@@ -15,7 +16,7 @@ const DropdownContent = forwardRef<HTMLDivElement, UseDropdownContentProps>(
 	({ children, className }, ref) => {
 		return (
 			<PopoverContent className={className ?? 'popover-defaultContent'}>
-				{children}
+				<Menu>{children}</Menu>
 			</PopoverContent>
 		);
 	}
