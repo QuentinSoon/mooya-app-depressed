@@ -9,12 +9,17 @@ import {
 	DropdownSeparator,
 	DropdownTrigger,
 } from '@/components/dropdown';
+import { LogModal } from '@/library/LogModal';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import LOGO from '../../public/logo.png';
 
 export default function Home() {
 	const router = useRouter();
+
+	const [open, setOpen] = useState(false);
+
 	return (
 		<main className="h-screen w-screen flex flex-col">
 			<div className="h-16 border flex flex-row items-center justify-between px-8 z-10">
@@ -24,13 +29,14 @@ export default function Home() {
 					</div>
 					<div className="font-semibold">Mooya</div>
 				</div>
+				<LogModal open={open} setOpen={setOpen} />
 				<div>
 					<Dropdown placement="bottom-right">
 						<DropdownTrigger>
 							<Button>Mon Compte</Button>
 						</DropdownTrigger>
 						<DropdownContent size="md">
-							<DropdownItem className="font-medium">Inscription</DropdownItem>
+							<DropdownItem>Inscription</DropdownItem>
 							<DropdownItem className="font-medium">Connexion</DropdownItem>
 							<DropdownSeparator />
 							<DropdownItem>Louer mon logement</DropdownItem>

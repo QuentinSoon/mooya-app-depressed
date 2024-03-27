@@ -70,7 +70,7 @@ const Modal = forwardRef<HTMLButtonElement, UseModalProps>(
 							animate="active"
 							exit="inactive"
 							className={cn(
-								'absolute z-10 top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2',
+								'absolute z-20 top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl',
 								className
 							)}
 						>

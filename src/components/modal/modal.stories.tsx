@@ -11,11 +11,15 @@ export default {
 		layout: 'centered',
 	},
 	decorators: [
-		(Story) => (
-			<div className="flex items-center justify-center w-full h-full">
-				<Story />
-			</div>
-		),
+		(Story) => {
+			const [open, setOpen] = useState(false);
+			console.log(open);
+			return (
+				<div className="flex items-center justify-center w-full h-full">
+					<Story />
+				</div>
+			);
+		},
 	],
 } as Meta<typeof Modal>;
 
@@ -24,11 +28,7 @@ export const Default = (props: ModalProps) => {
 	return (
 		<div>
 			<Button onClick={() => setOpen(true)}>Test Button</Button>
-			<Modal
-				open={open}
-				setOpen={setOpen}
-				className="bg-white rounded-2xl p-4 w-80 h-96"
-			>
+			<Modal open={open} setOpen={setOpen} className="p-4">
 				Test
 			</Modal>
 		</div>

@@ -4,7 +4,6 @@ import { cn } from '@/libs/cn';
 import { motion } from 'framer-motion';
 import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
 import { BackdropProps } from '.';
-import { usePopoverContext } from '../popover/popover-context';
 import { PopoverPlacementsProps } from '../popover/types';
 import './overlay.scss';
 
@@ -33,7 +32,7 @@ const Overlay = forwardRef<HTMLDivElement, UseOverlayProps>(
 		},
 		ref
 	) => {
-		const context = usePopoverContext();
+		// const { open, setOpen } = useOverlayStore();
 		return (
 			<>
 				<div className="z-[1000]">{children}</div>

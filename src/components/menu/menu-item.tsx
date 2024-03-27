@@ -18,7 +18,7 @@ export type UseMenuItemProps = Omit<
 	MenuItemProps;
 
 const MenuItem = forwardRef<HTMLLIElement, UseMenuItemProps>(
-	({ variant, color, children, className }, ref) => {
+	({ variant, color, children, className, ...otherProps }, ref) => {
 		const context = useMenuContext();
 		return (
 			<li
@@ -30,6 +30,7 @@ const MenuItem = forwardRef<HTMLLIElement, UseMenuItemProps>(
 					`menu-item-color-${color ?? context.color}`,
 					className
 				)}
+				{...otherProps}
 			>
 				{children}
 			</li>
