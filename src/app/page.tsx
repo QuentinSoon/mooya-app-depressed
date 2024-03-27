@@ -45,7 +45,6 @@ export default function Home() {
 						</DropdownContent>
 					</Dropdown>
 				</div>
-				``
 			</div>
 			<div className="grow flex items-center justify-center flex-col space-y-0.5">
 				<div className="font-semibold">

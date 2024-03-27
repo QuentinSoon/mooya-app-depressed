@@ -11,7 +11,7 @@ export default {
 	decorators: [
 		(Story) => (
 			<div className="flex items-center justify-center w-full h-full">
-				<div className="w-52 p-2 overflow-hidden bg-white rounded-2xl shadow-lg ring-1 ring-neutral-200">
+				<div className="w-52 p-2 overflow-hidden bg-white rounded-2xl ring-1 ring-neutral-200">
 					<Story />
 				</div>
 			</div>
