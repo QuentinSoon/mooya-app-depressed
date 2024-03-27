@@ -1,4 +1,5 @@
 import type { Meta } from '@storybook/react';
+import { DropdownSeparator } from '.';
 import { Button } from '../button';
 import { MenuColorProps, MenuSizeProps } from '../menu';
 import { Dropdown, DropdownProps } from './dropdown';
@@ -90,3 +91,42 @@ export const Default = (props: DropdownProps) => {
 		</div>
 	);
 };
+
+export const LogMenu = (props: DropdownProps) => (
+	<Dropdown {...props}>
+		<DropdownTrigger>
+			<Button color="basic" size="md" variant="solid">
+				Test
+			</Button>
+		</DropdownTrigger>
+		<DropdownContent variant="flat" size="md" color="basic">
+			<DropdownItem className="font-medium">Inscription</DropdownItem>
+			<DropdownItem className="font-medium">Connexion</DropdownItem>
+			<DropdownSeparator />
+			<DropdownItem>Louer mon logement</DropdownItem>
+			<DropdownItem>Trouver un logement</DropdownItem>
+			<DropdownItem>Aide</DropdownItem>
+		</DropdownContent>
+	</Dropdown>
+);
+
+export const LoggedMenu = (props: DropdownProps) => (
+	<Dropdown {...props}>
+		<DropdownTrigger>
+			<Button color="basic" size="md" variant="solid">
+				Test
+			</Button>
+		</DropdownTrigger>
+		<DropdownContent variant="flat" size="md" color="basic">
+			<DropdownItem className="font-medium">Profile</DropdownItem>
+			<DropdownItem className="font-medium">Compte</DropdownItem>
+			<DropdownItem className="font-medium">Obtenir de l`aide</DropdownItem>
+			<DropdownSeparator />
+			<DropdownItem>Français (FR)</DropdownItem>
+			<DropdownItem>€ EUR</DropdownItem>
+			<DropdownSeparator />
+			<DropdownItem>Parrainer un hôte</DropdownItem>
+			<DropdownItem color="poppy">Déconnexion</DropdownItem>
+		</DropdownContent>
+	</Dropdown>
+);
