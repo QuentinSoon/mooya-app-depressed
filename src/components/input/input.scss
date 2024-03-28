@@ -1,0 +1,32 @@
+.wrapper {
+	@apply relative box-border duration-150 cursor-text hover:bg-neutral-50;
+
+	&.wrapper-variant-default {
+		@apply border border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
+
+		.wrapper-input {
+			@apply absolute top-1/2 transform -translate-y-1/2 right-3 left-3;
+		}
+
+		.wrapper-content {
+			@apply absolute top-1/2 transform -translate-y-1/2 right-3 left-3 text-sm;
+		}
+	}
+
+	&.wrapper-variant-floating {
+		@apply border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
+		@apply focus-within:border-black;
+
+		.wrapper-input {
+			@apply absolute top-1/2 transform -translate-y-1/2 right-3 left-3 text-sm appearance-none outline-none border-none bg-transparent;
+		}
+
+		.wrapper-content {
+			@apply absolute top-1/2 transform -translate-y-1/2 right-3 left-3 text-sm;
+		}
+	}
+
+	&.wrapper-variant-ifta {
+		@apply m-0;
+	}
+}

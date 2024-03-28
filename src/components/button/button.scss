@@ -27,7 +27,7 @@
 	&.button-variant-outline {
 		@apply bg-transparent text-[--btn-text] border-2 border-[--btn-border];
 		&:not(:disabled):hover {
-			@apply bg-[--btn-background-hover];
+			@apply bg-[--btn-background-hover] border-[--btn-border-hover];
 		}
 	}
 	&.button-variant-ghost {
