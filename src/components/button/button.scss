@@ -65,7 +65,7 @@
 		}
 	}
 	&.button-size-md {
-		@apply px-4 h-10 min-w-20 text-sm font-semibold rounded-xl gap-1;
+		@apply px-4 h-10 min-w-20 text-sm font-medium rounded-xl gap-1;
 		svg {
 			@apply h-5 w-5; // Appliquer les styles au SVG à l'intérieur de .button-svg
 		}

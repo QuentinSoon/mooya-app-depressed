@@ -105,9 +105,9 @@ const Button = forwardRef<HTMLButtonElement, UseButtonProps>(
 				{loading && (
 					<Lottie animationData={Spinner} className="absolute h-full" />
 				)}
-				{startContent ? startContent : null}
+				{startContent ? startContent : <span></span>}
 				{children && <span className={cn('button-content')}>{children}</span>}
-				{endContent ? endContent : null}
+				{endContent ? endContent : <span></span>}
 			</button>
 		);
 	}

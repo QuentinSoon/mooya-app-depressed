@@ -23,7 +23,11 @@ const Input = forwardRef<HTMLInputElement, UseInputProps>(
 	({ variant = 'floating', placeholder, ...otherProps }, ref) => {
 		return (
 			<label className={cn('wrapper', `wrapper-variant-${variant}`)}>
-				<input className={cn('wrapper-input')} ref={ref} />
+				<input
+					className={cn('wrapper-input')}
+					placeholder={placeholder}
+					ref={ref}
+				/>
 				{/* <span className={cn('wrapper-content')}>{placeholder}</span> */}
 			</label>
 		);
