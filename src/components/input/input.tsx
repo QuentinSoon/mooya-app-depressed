@@ -20,7 +20,7 @@ type UseInputProps = Omit<
 	InputProps;
 
 const Input = forwardRef<HTMLInputElement, UseInputProps>(
-	({ variant = 'floating', placeholder, ...otherProps }, ref) => {
+	({ variant = 'default', placeholder, ...otherProps }, ref) => {
 		return (
 			<label className={cn('wrapper', `wrapper-variant-${variant}`)}>
 				<input

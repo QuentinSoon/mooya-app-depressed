@@ -61,11 +61,11 @@ export const Default = (props: ModalProps) => {
 					</button>
 				</div>
 				<div className="relative p-4 flex flex-col gap-4">
-					<div className="flex flex-col gap-1">
+					<div className="flex flex-col gap-0.5">
 						<h1 className="text-lg font-medium">Inscription ou connexion</h1>
-						<p className="text-sm font-medium">
-							Vous connectez vous permet d utiliser la plateforme et a ses
-							fonctionnalites.
+						<p className="text-sm text-neutral-600 font-normal">
+							Vous connecter vous permet d utiliser la plateforme et ses
+							fonctionnalités.
 						</p>
 					</div>
 					<div className="flex flex-col gap-2">
