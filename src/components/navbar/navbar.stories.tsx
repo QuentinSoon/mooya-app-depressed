@@ -36,7 +36,7 @@ export const Default = (props: NavbarProps) => (
 						Mon Compte
 					</Button>
 				</DropdownTrigger>
-				<DropdownContent>
+				<DropdownContent variant="flat" size="md" color="basic">
 					<DropdownItem className="font-medium">Profile</DropdownItem>
 					<DropdownItem className="font-medium">Compte</DropdownItem>
 					<DropdownItem className="font-medium">Obtenir de l`aide</DropdownItem>
