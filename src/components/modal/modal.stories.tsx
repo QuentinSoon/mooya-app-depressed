@@ -6,7 +6,7 @@ import { Input } from '../input';
 import { Modal, ModalProps } from './modal';
 
 export default {
-	title: 'Library/Modal',
+	title: 'Components/Modal',
 	component: Modal,
 	tags: ['autodocs'],
 	parameters: {

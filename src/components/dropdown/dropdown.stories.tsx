@@ -8,7 +8,7 @@ import { DropdownItem } from './dropdown-item';
 import { DropdownTrigger } from './dropdown-trigger';
 
 export default {
-	title: 'Library/Dropdown',
+	title: 'Components/Dropdown',
 	component: Dropdown,
 	tags: ['autodocs'],
 	parameters: {

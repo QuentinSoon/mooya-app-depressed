@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Menu, MenuItem, MenuProps, MenuSeparator } from '.';
 
 export default {
-	title: 'Library/Menu',
+	title: 'Components/Menu',
 	component: Menu,
 	tags: ['autodocs'],
 	parameters: {

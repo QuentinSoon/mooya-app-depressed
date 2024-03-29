@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Avatar, AvatarProps } from '.';
 
 export default {
-	title: 'Library/Avatar',
+	title: 'Components/Avatar',
 	component: Avatar,
 	tags: ['autodocs'],
 	decorators: [
