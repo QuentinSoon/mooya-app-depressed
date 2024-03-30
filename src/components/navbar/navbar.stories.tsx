@@ -29,6 +29,32 @@ export const Default = (props: NavbarProps) => (
 				Espace Locataire
 			</h1>
 		</div>
+		<div className="inline-flex items-center justify-center">
+			<Button variant="light" rounded="full">
+				Aujourdhui
+			</Button>
+			<Button variant="light" rounded="full">
+				Messages
+			</Button>
+			<Button variant="light" rounded="full">
+				Informations
+			</Button>
+			<Button variant="light" rounded="full">
+				Calendrier
+			</Button>
+			<Dropdown>
+				<DropdownTrigger>
+					<Button variant="light" rounded="full">
+						Menu
+					</Button>
+				</DropdownTrigger>
+				<DropdownContent>
+					<DropdownItem>Item 1</DropdownItem>
+					<DropdownItem>Item 2</DropdownItem>
+					<DropdownItem>Item 3</DropdownItem>
+				</DropdownContent>
+			</Dropdown>
+		</div>
 		<div>
 			<Dropdown placement="bottom-right">
 				<DropdownTrigger>
