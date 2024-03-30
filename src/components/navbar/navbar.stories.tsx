@@ -21,7 +21,7 @@ export default {
 	decorators: [(Story) => <Story />],
 } as Meta<typeof Navbar>;
 
-export const Default = (props: NavbarProps) => (
+export const NavbarHosting = (props: NavbarProps) => (
 	<Navbar {...props}>
 		<div className="inline-flex items-center gap-4">
 			<Image src={LOGO} height={32} alt="logo" />
