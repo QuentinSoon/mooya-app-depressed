@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Button, ButtonProps } from '.';
 
 export default {
-	title: 'Library/Button',
+	title: 'Components/Button',
 	component: Button,
 	tags: ['autodocs'],
 	decorators: [

@@ -5,7 +5,7 @@ import { PopoverContent } from './popover-content';
 import { PopoverTrigger } from './popover-trigger';
 
 export default {
-	title: 'Library/Popover',
+	title: 'Components/Popover',
 	component: Popover,
 	tags: ['autodocs'],
 	parameters: {

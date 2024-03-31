@@ -3,7 +3,7 @@ import { Kbd } from '.';
 import { KbdProps } from './kbd';
 
 export default {
-	title: 'Library/Kbd',
+	title: 'Components/Kbd',
 	component: Kbd,
 	tags: ['autodocs'],
 	parameters: {

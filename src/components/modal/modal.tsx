@@ -18,7 +18,7 @@ type ModalProps = PropsWithChildren<{
 type UseModalProps = Omit<HTMLAttributes<HTMLDivElement>, keyof ModalProps> &
 	ModalProps;
 
-const Modal = forwardRef<HTMLButtonElement, UseModalProps>(
+const Modal = forwardRef<HTMLDivElement, UseModalProps>(
 	(
 		{
 			open = false,

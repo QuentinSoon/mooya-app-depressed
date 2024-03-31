@@ -9,7 +9,6 @@ import {
 	DropdownSeparator,
 	DropdownTrigger,
 } from '@/components/dropdown';
-import { LogModal } from '@/library/LogModal';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -29,7 +28,6 @@ export default function Home() {
 					</div>
 					<div className="font-semibold">Mooya</div>
 				</div>
-				<LogModal open={open} setOpen={setOpen} />
 				<div>
 					<Dropdown placement="bottom-right">
 						<DropdownTrigger>
