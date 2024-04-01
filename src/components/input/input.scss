@@ -10,7 +10,7 @@
 		// Input
 		.wrapper-input {
 			@apply absolute transform top-1/2 -translate-y-1/2 left-4 right-4;
-			@apply appearance-none outline-none border-none bg-transparent duration-150;
+			@apply appearance-none outline-none border-none bg-transparent duration-150 placeholder:text-sm;
 		}
 		&:not(:focus-within) .wrapper-input {
 			@apply placeholder-transparent;
@@ -19,7 +19,7 @@
 		// Content
 		.wrapper-content {
 			@apply absolute transform top-1/2 -translate-y-1/2 duration-150 left-4 right-4;
-			@apply font-normal pointer-events-none;
+			@apply font-normal text-sm pointer-events-none;
 		}
 		&:focus-within .wrapper-content,
 		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
@@ -36,7 +36,7 @@
 		// Input
 		.wrapper-input {
 			@apply absolute transform top-1/2 -translate-y-1/2 left-4 right-4;
-			@apply appearance-none outline-none border-none bg-transparent duration-150;
+			@apply appearance-none outline-none border-none bg-transparent duration-150 placeholder:text-sm;
 		}
 		&:not(:focus-within) .wrapper-input {
 			@apply placeholder-transparent;
@@ -45,7 +45,7 @@
 		// Content
 		.wrapper-content {
 			@apply absolute transform top-1/2 -translate-y-1/2 duration-150 px-1 left-3 right-3;
-			@apply font-normal pointer-events-none;
+			@apply font-normal text-sm pointer-events-none;
 		}
 		&:focus-within .wrapper-content,
 		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
