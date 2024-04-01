@@ -69,7 +69,10 @@ export const Default = (props: ModalProps) => {
 						</p>
 					</div>
 					<div className="flex flex-col gap-2">
-						<Input placeholder="Entrez votre adresse email" />
+						<Input
+							variant="floating"
+							placeholder="Entrez votre adresse email"
+						/>
 						<Button color="berry" fullWidth>
 							Continuer
 						</Button>
