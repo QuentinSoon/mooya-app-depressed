@@ -1,5 +1,5 @@
 .wrapper {
-	@apply relative box-border duration-150 cursor-pointer hover:bg-neutral-50;
+	@apply relative box-border duration-150 cursor-text hover:bg-neutral-50;
 
 	&.wrapper-variant-default {
 		@apply border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
@@ -14,20 +14,75 @@
 		}
 	}
 
-	&.wrapper-variant-floating {
-		@apply border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
-		@apply focus-within:border-black;
+	// &.wrapper-variant-floating {
+	// 	@apply border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
+	// 	@apply focus-within:border-black;
 
-		.wrapper-input {
-			@apply absolute top-1/2 transform -translate-y-1/2 right-3 left-3 text-sm pointer-events-none appearance-none outline-none border-none bg-transparent;
+	// 	.wrapper-input {
+	// 		@apply absolute duration-150 top-1/2 transform -translate-y-1/2 right-4 left-4 text-sm pointer-events-none appearance-none outline-none border-none bg-transparent;
+	// 	}
+
+	// 	.wrapper-content {
+	// 		@apply absolute duration-150 select-none top-1/2 transform -translate-y-1/2 right-4 left-4 text-sm font-medium;
+	// 	}
+	// 	&:focus-within .wrapper-content,
+	// 	.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
+	// 		@apply absolute top-0 text-xs bg-white font-normal right-3 left-3 px-1 w-fit;
+	// 	}
+	// 	&:not(:focus-within) .wrapper-input {
+	// 		@apply placeholder-transparent;
+	// 	}
+	// }
+
+	&.wrapper-variant-floating {
+		@apply relative border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
+		&:focus-within {
+			@apply border-black;
 		}
 
+		// Input
+		.wrapper-input {
+			@apply absolute transform top-1/2 -translate-y-1/2 left-4 right-4;
+			@apply pointer-events-none appearance-none outline-none border-none bg-transparent duration-150;
+		}
+		&:not(:focus-within) .wrapper-input {
+			@apply placeholder-transparent;
+		}
+
+		// Content
 		.wrapper-content {
-			@apply absolute top-1/2 transform -translate-y-1/2 right-3 left-3 text-sm font-medium;
+			@apply absolute transform top-1/2 -translate-y-1/2 duration-150 px-1 left-3 right-3;
+			@apply select-none font-normal;
+		}
+		&:focus-within .wrapper-content,
+		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
+			@apply absolute top-0 text-xs bg-white font-normal w-fit;
 		}
 	}
 
 	&.wrapper-variant-ifta {
-		@apply m-0;
+		@apply relative border-2 border-[--color-basic-200] border-solid rounded-xl px-4 h-10 min-w-60;
+		&:focus-within {
+			@apply border-black;
+		}
+
+		// Input
+		.wrapper-input {
+			@apply absolute transform top-1/2 -translate-y-1/2 left-4 right-4;
+			@apply pointer-events-none appearance-none outline-none border-none bg-transparent duration-150;
+		}
+		&:not(:focus-within) .wrapper-input {
+			@apply placeholder-transparent;
+		}
+
+		// Content
+		.wrapper-content {
+			@apply absolute transform top-1/2 -translate-y-1/2 duration-150 px-1 left-3 right-3;
+			@apply select-none font-normal;
+		}
+		&:focus-within .wrapper-content,
+		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
+			@apply absolute top-0 text-xs bg-white font-normal w-fit;
+		}
 	}
 }
