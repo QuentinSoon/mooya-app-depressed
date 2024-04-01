@@ -28,7 +28,7 @@ const Input = forwardRef<HTMLInputElement, UseInputProps>(
 					placeholder={placeholder}
 					ref={ref}
 				/>
-				{/* <span className={cn('wrapper-content')}>{placeholder}</span> */}
+				<span className={cn('wrapper-content')}>{placeholder}</span>
 			</label>
 		);
 	}
