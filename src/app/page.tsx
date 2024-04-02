@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/button';
+import { Button } from '@/library/button';
 
 import {
 	Dropdown,
@@ -8,7 +8,8 @@ import {
 	DropdownItem,
 	DropdownSeparator,
 	DropdownTrigger,
-} from '@/components/dropdown';
+} from '@/library/dropdown';
+import { LoginModal } from '@/library/modal/modal.stories';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -29,13 +30,21 @@ export default function Home() {
 					<div className="font-semibold">Mooya</div>
 				</div>
 				<div>
+					<LoginModal open={open} setOpen={() => setOpen(false)} />
 					<Dropdown placement="bottom-right">
 						<DropdownTrigger>
 							<Button>Mon Compte</Button>
 						</DropdownTrigger>
 						<DropdownContent size="md">
 							<DropdownItem className="font-medium">Inscription</DropdownItem>
-							<DropdownItem className="font-medium">Connexion</DropdownItem>
+							<DropdownItem
+								className="font-medium"
+								onClick={() => {
+									setOpen(true);
+								}}
+							>
+								Connexion
+							</DropdownItem>
 							<DropdownSeparator />
 							<DropdownItem>Louer mon logement</DropdownItem>
 							<DropdownItem>Trouver un logement</DropdownItem>
