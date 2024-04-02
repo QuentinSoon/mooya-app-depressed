@@ -2,6 +2,8 @@ name: Continous Integration and Continous Deployment
 
 on:
   push:
+  pull_request:
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
