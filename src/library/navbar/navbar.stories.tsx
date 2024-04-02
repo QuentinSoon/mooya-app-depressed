@@ -15,7 +15,7 @@ import {
 import { Navbar, NavbarProps } from './navbar';
 
 export default {
-	title: 'Components/Navbar',
+	title: 'Library/Navbar',
 	component: Navbar,
 	tags: ['autodocs'],
 	parameters: {

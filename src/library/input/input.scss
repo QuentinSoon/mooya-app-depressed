@@ -49,7 +49,7 @@
 		}
 		&:focus-within .wrapper-content,
 		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
-			@apply absolute top-0 text-xs bg-white font-normal text-neutral-400 w-fit;
+			@apply absolute top-0 text-xs bg-white font-normal text-neutral-900 w-fit;
 		}
 	}
 
@@ -76,7 +76,7 @@
 		}
 		&:focus-within .wrapper-content,
 		.wrapper-input:not(:placeholder-shown) ~ .wrapper-content {
-			@apply absolute top-0.5 translate-y-0 text-xs font-normal w-fit text-neutral-400;
+			@apply absolute top-0.5 translate-y-0 text-xs font-normal w-fit text-neutral-900;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/button';
+import { Button } from '@/library/button';
 
 import {
 	Dropdown,
@@ -8,8 +8,8 @@ import {
 	DropdownItem,
 	DropdownSeparator,
 	DropdownTrigger,
-} from '@/components/dropdown';
-import { LoginModal } from '@/components/modal/modal.stories';
+} from '@/library/dropdown';
+import { LoginModal } from '@/library/modal/modal.stories';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';

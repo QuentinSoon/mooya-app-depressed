@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Checkbox, CheckboxProps } from '.';
 
 export default {
-	title: 'Components/Checkbox',
+	title: 'Library/Checkbox',
 	component: Checkbox,
 	tags: ['autodocs'],
 	decorators: [

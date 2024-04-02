@@ -6,7 +6,7 @@ import { Input } from '../input';
 import { Modal, ModalProps } from './modal';
 
 export default {
-	title: 'Components/Modal',
+	title: 'Library/Modal',
 	component: Modal,
 	tags: ['autodocs'],
 	parameters: {
@@ -221,7 +221,7 @@ export const LoginModal = ({ open, setOpen }: ModalProps) => {
 							</svg>
 						}
 					>
-						Connexion avec Google
+						Continuer avec Google
 					</Button>
 					<Button
 						variant="outline"
@@ -238,7 +238,7 @@ export const LoginModal = ({ open, setOpen }: ModalProps) => {
 							</svg>
 						}
 					>
-						Connexion avec un numero de telephone
+						Continuer avec un numero de telephone
 					</Button>
 				</div>
 			</div>

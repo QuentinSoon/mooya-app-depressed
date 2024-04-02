@@ -1,4 +1,4 @@
-import { NavbarHosting } from '@/components/navbar/navbar.stories';
+import { NavbarHosting } from '@/library/navbar/navbar.stories';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

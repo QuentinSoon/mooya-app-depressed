@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { Input, InputProps } from '.';
 
 export default {
-	title: 'Components/Input',
+	title: 'Library/Input',
 	component: Input,
 	tags: ['autodocs'],
 	parameters: {
