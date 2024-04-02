@@ -9,8 +9,8 @@ import { PopoverPlacementsProps } from '../popover/types';
 import './modal.scss';
 
 type ModalProps = PropsWithChildren<{
-	open?: boolean;
-	setOpen?: (newValue: boolean) => void;
+	open: boolean;
+	setOpen: (newValue: boolean) => void;
 	backdrop?: BackdropProps;
 	placement?: PopoverPlacementsProps;
 }>;

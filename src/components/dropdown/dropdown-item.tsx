@@ -24,8 +24,16 @@ const DropdownItem = forwardRef<HTMLLIElement, UseDropdownItemProps>(
 				variant={variant}
 				color={color}
 				className={className}
-				{...otherProps}
+				onClick={(event) => {
+					if (context.setOpen) {
+						context.setOpen(false);
+					}
+					if (otherProps.onClick) {
+						otherProps.onClick(event);
+					}
+				}}
 			>
+				{/* // {...otherProps} */}
 				{children}
 			</MenuItem>
 		);
