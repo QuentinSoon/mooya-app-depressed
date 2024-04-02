@@ -1,7 +1,6 @@
-'use client';
 import MESSAGES from '../../../messages.json';
 
-export default function Home() {
+export default async function Home() {
 	const DEBUG = [
 		{
 			title: 'Test',
